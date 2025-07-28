@@ -6,25 +6,18 @@ public class Main {
         System.out.println("Кол-во");
         int count = scanner.nextInt();
         System.out.println("Цена в lis");
-        int price = scanner.nextInt();
+        double price = scanner.nextDouble();
         System.out.println("Цена в Steam");
-        int steam_Price = scanner.nextInt();
-        int summa = calcu(count, price, steam_Price);
+        double steam_Price = scanner.nextDouble();
+        double summa = calcu(count, price, steam_Price);
         System.out.println("Итого:" + summa);
 
     }
-    public static int calcu(int count, int price, int steam_price) {
-        int tax = steam_price / 100;
-        int tax2 = tax * 13;
-        int price2 = price - tax2;
-        return price2 * count;
-
-
-
-
-
-
+    public static int calcu(int count, double price, double steam_price) {
+        double tax = steam_price / 100;
+        double tax2 = tax * 13;
+        double price2 = steam_price - tax2;
+        return (int) (price2 * count);
     }
 }
-
 
